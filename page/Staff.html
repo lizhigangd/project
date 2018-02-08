@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工作人员管理</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="css/icon.css" />
+    <link rel="stylesheet" type="text/css" href="css/page.css" >
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.easyui.min.js"></script>
+    <script>
+        $(function () {
+            $('#dg').datagrid({fitColumns:true,singleSelect:(this.value==1)})
+        })
+        /*按钮*/
+/*        var toolbar = [{
+            text:'添加',
+            iconCls:'icon-add',
+            handler:function(){alert('add')}
+        },{
+            text:'删除',
+            iconCls:'icon-remove',
+            handler:function(){alert('cut')}
+        },{
+            text:'下载',
+            iconCls:'icon-down',
+            handler:function(){alert('download')}
+        },{
+            text:'导入',
+            iconCls:'icon-redo',
+            handler:function(){alert('redo')}
+        },{
+            text:'导出',
+            iconCls:'icon-undo',
+            handler:function(){alert('undo')}
+        },{
+            text:'审核',
+            iconCls:'icon-lock',
+            handler:function(){alert('lock')}
+        },{
+            text:'查看服务记录',
+            iconCls:'icon-search',
+            handler:function(){alert('search')}
+        },];*/
+        $(function(){
+            var pager = $('#dg').datagrid().datagrid('getPager');	// get the pager of datagrid
+            /*            pager.pagination({
+                            buttons:[{
+                                iconCls:'icon-search',
+                                handler:function(){
+                                    alert('search');
+                                }
+                            },{
+                                iconCls:'icon-add',
+                                handler:function(){
+                                    alert('add');
+                                }
+                            },{
+                                iconCls:'icon-edit',
+                                handler:function(){
+                                    alert('edit');
+                                }
+                            }]
+                        });*/
+        })
+    </script>
+</head>
+<body>
+<div style="width:100%;border: 1px solid #d5e3f5;">
+<!--    <div style="border-bottom: 1px solid #d5e3f5;padding: 10px 0px">
+        <span class="tab-title">亲属信息</span>
+    </div>-->
+    <!--搜索栏-->
+    <div id="#tb">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-down" plain="true">下载</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-redo" plain="true">导入</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true">导出</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-lock" plain="true">审核</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true">查看服务记录</a>
+    </div>
+    <div  class="se-in" style="padding:3px">
+        <div style="margin-top: 5px ;font-size: 12px">
+        <span>真实姓名:</span>
+        <input id="itemid" style="line-height:26px;border:1px solid #ccc;margin-right: 20px">
+        <span>联系电话:</span>
+        <input id="phone" style="line-height:26px;border:1px solid #ccc;margin-right: 20px">
+        <span>服务技能:</span>
+        <input id="serve" style="line-height:26px;border:1px solid #ccc;margin-right: 20px">
+        </div>
+        <div style="margin-top: 5px;font-size: 12px">
+        <span>身份证号:</span>
+        <input id="idcard" style="line-height:26px;border:1px solid #ccc;margin-right: 20px">
+        <span style="padding-right: 24px">性别:</span>
+        <select id="sex" class="easyui-combobox" name="state" style="width:170px;height:26px;">
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+        </select>
+        <span style="margin-right: 20px"></span>
+        <span>所属区域:</span>
+        <select id="address" class="easyui-combobox" name="state" style="width:170px;height:26px;margin-right: 20px">
+            <option value="AL">男</option>
+            <option value="AK">女</option>
+        </select>
+        <span style="margin-right: 20px"></span>
+        <a href="#" class="easyui-linkbutton " iconCls="icon-search"  plain="true" onclick="doSearch()">查询</a>
+        </div>
+    </div>
+    </div>
+    <div style="padding: 10px">
+        <table id="dg" class="easyui-datagrid" title="工作人员基本信息" style="width: 1920px;margin-left: 10px;position: absolute;overflow: hidden;"
+               data-options="rownumbers:true,singleSelect:true,pagination:true,url:'http://www.discoversimba.com/json/product/list.json',method:'get',toolbar:toolbar" toolbar="#tb">
+            <thead>
+            <tr>
+                <th data-options="field:'ck',checkbox:true"></th>
+                <th data-options="field:'itemid',width:80,align:'center'">真实姓名</th>
+                <th data-options="field:'productid',width:80,align:'center'">联系电话</th>
+                <th data-options="field:'listprice',width:80,align:'center'">注册账号</th>
+                <th data-options="field:'unitcost',width:160,align:'center'">身份证号</th>
+                <th data-options="field:'attr1',width:160,align:'center'">性别</th>
+                <th data-options="field:'status',width:160,align:'center'">审核状态</th>
+                <th data-options="field:'status',width:160,align:'center'">累计服务单数</th>
+                <th data-options="field:'status',width:80,align:'center'">累计服务时长</th>
+                <th data-options="field:'status',width:60,align:'center'">积分</th>
+                <th data-options="field:'status',width:60,align:'center'">年龄</th>
+                <th data-options="field:'status',width:60,align:'center'">注册方式</th>
+                <th data-options="field:'status',width:100,align:'center'">注册时间</th>
+                <th data-options="field:'status',width:100,align:'center'">操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+</body>
+</html>

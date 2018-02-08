@@ -1,0 +1,24 @@
+[
+  {
+
+    "pid": 2006,
+    "text": "活动轨迹",
+    "state": "open",
+    "iconCls": "",
+    "url": "page/activity_track.html"
+  },{
+
+  "pid": 2006,
+  "text": "定时定位",
+  "state": "open",
+  "iconCls": "",
+  "url": "page/positioning_manage.html"
+},{
+
+  "pid": 2006,
+  "text": "围栏管理",
+  "state": "open",
+  "iconCls": "",
+  "url": "page/fence_management.html"
+}
+]

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增老人</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/other.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- TopJUI框架样式 -->
+    <link type="text/css" href="../topjui/css/topjui.core.min.css" rel="stylesheet">
+    <link type="text/css" href="../topjui/themes/default/topjui.classic.css" rel="stylesheet" id="dynamicTheme"/>
+    <!-- FontAwesome字体图标 -->
+    <link type="text/css" href="../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- layui框架样式 -->
+    <link type="text/css" href="../static/plugins/layui/css/layui.css" rel="stylesheet"/>
+    <!-- jQuery相关引用 -->
+    <script type="text/javascript" src="../static/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/plugins/jquery/jquery.cookie.js"></script>
+    <!-- TopJUI框架配置 -->
+    <script type="text/javascript" src="../static/public/js/topjui.config.js"></script>
+    <!-- TopJUI框架核心-->
+    <script type="text/javascript" src="../topjui/js/topjui.core.min.js"></script>
+    <!-- TopJUI中文支持 -->
+    <script type="text/javascript" src="../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+    <!-- layui框架js -->
+    <script type="text/javascript" src="../static/plugins/layui/layui.js" charset="utf-8"></script>
+</head>
+<body style="min-width: 1180px">
+ <div style="padding-bottom: 20px">
+     <table class="tbd" id="jiben" style="width:100%;margin-top: 10px">
+         <tbody align="right">
+         <tr style="height:30px;" class="firstRow">
+             <th width="10%">
+                 <span style="color:red">*</span>老人姓名：
+             </th>
+             <td align="left" width="15%">
+                 <input type="text" name="name" data-toggle="topjui-textbox"
+                        data-options="required:true,width:140,height:20">
+             </td>
+             <th width="10%">
+                 <span style="color:red" id="idcard">*</span>身份证号码：
+             </th>
+             <td align="left" width="15%">
+                 <input  type="text" id="h_CardID" data-toggle="topjui-textbox"
+                 data-options="required:true,width:140,height:20">
+                 </span>
+             </td>
+             <th width="10%">
+                 <span style="color:red">*</span>性别：
+             </th>
+             <td align="left" width="15%">
+                 <input type="text" name="sex"
+                        data-toggle="topjui-combobox"
+                        data-options="required:true,
+                       valueField:'id',
+                       textField:'text',
+                       data:[{id:1,text:'男'},{id:2,text:'女'}],width:140,height:20">
+             </td>
+             <th align="center" rowspan="4" width="10%">
+                 图片：
+             </th>
+             <td align="center" rowspan="4">
+                 <input type="hidden" id="h_PersonImg" name="h_PersonImg" value="">
+                 <div id="h_PersonImg_div">
+             </div><input class="" filetype="*.jpg;*.png;*.gif" filetext="1" filewidth="150" fileheight="120" type="text" name="h_PersonImg_text" id="h_PersonImg_text" style="display: none;"><input type="button" style="border-left:none;margin:0;" value="图片管理">
+             </td>
+         </tr>
+         <tr style="height:30px;">
+             <th width="70px">
+                 <span style="color:red">*</span>联系手机号：
+             </th>
+             <td align="left" id="oldphonediv">
+                 <input  type="text" id="h_OldPhone" data-toggle="topjui-textbox"
+                         data-options="required:true,width:140,height:20">
+             </td>
+             <th width="70px">
+                 婚姻状况：
+             </th>
+             <td align="left">
+                <input type="text"  data-toggle="topjui-textbox"
+                       data-options="width:140,height:20">
+
+             </td>
+             <th width="70px">
+                 <span style="color:red">*</span>民族：
+             </th>
+             <td align="left">
+                 <input type="text"  data-toggle="topjui-textbox"
+                        data-options="width:140,height:20">
+             </td>
+         </tr>
+
+         <tr style="height:30px;">
+             <th width="70px">
+                 <span></span>联系手机号2：
+             </th>
+             <td align="left" id="oldphonediv1">
+                 <input type="text"   data-toggle="topjui-textbox"
+                        data-options="width:140,height:20">
+             </td>
+             <th width="70px">
+                 <span></span>联系手机号3：
+             </th>
+             <td align="left" colspan="3" id="oldphonediv2">
+                 <input type="text"  data-toggle="topjui-textbox"
+                        data-options="width:140,height:20">
+             </td>
+
+         </tr>
+         <tr style="height:30px;">
+             <th width="70px">
+                 <span style="color:red">*</span> 老人类别：
+             </th>
+             <td align="left">
+                 <input type="text" name="old_type"
+                        data-toggle="topjui-combobox"
+                        data-options="required:true,
+                       valueField:'id',
+                       textField:'text',
+                       data:[{id:1,text:'类别一'},{id:2,text:'类别二'}],width:140,height:20">
+             </td>
+             <th width="100px">
+                 <span style="color:red">*</span>出生日期：
+             </th>
+             <td align="left">
+                 <input data-toggle="topjui-datebox" data-options="required:true,prompt:'出生日期是必填字段'">
+
+             </td>
+             <th width="70px">
+                 <span style="color:red">*</span>年龄：
+             </th>
+             <td align="left">
+                 <input type="text"  data-toggle="topjui-textbox"
+                        data-options="width:140,height:20">
+             </td>
+         </tr>
+         <tr style="height:30px;">
+             <th width="70px">
+                 <span style="color:red">*</span>家庭住址：
+             </th>
+             <td align="left" colspan="5">
+                 <input type="text" name="address"  data-toggle="topjui-textbox"
+                        data-options="width:140,height:20">
+             </td>
+         </tr>
+         <tr style="display:none" id="hujidz">
+             <th width="70px">
+                 <span style="color:red">*</span>户籍地址：
+             </th>
+             <td align="left" colspan="5">
+                 <input type="text"  data-toggle="topjui-textbox"
+                        data-options="width:140,height:20">
+             </td>
+
+         </tr>
+         <tr style="height:30px;">
+             <th width="100px">
+                 居住情况：
+             </th>
+             <td align="left" colspan="3">
+                 <input type="radio" name="h_Live" id="h_Live1" value="独自居住">独自居住
+                 <input type="radio" name="h_Live" id="h_Live2" value="与配偶二人住">与配偶二人住
+                 <input type="radio" name="h_Live" id="h_Live3" value="与子女合住" checked="true">与子女合住
+                 <input type="radio" name="h_Live" id="h_Live4" value="其他">其他
+             </td>
+             <th width="170px">
+                 <span style="color:red">*</span><span>所属服务机构：</span>
+             </th>
+             <td align="left" id="depts" colspan="3">
+                 <!--<select type="text" name="h_DeptID" id="h_DeptID" style="width:150px;" class="easyui-combogrid" required="true"></select>-->
+                 <input type="text" name="sex"
+                        data-toggle="topjui-combobox"
+                        data-options="required:true,
+                       valueField:'id',
+                       textField:'text',
+                       url:'',width:140,height:20">
+             </td>
+             <th width="100px" id="jingjith" style="display:none">
+                 <span style="color:red">*</span>
+                 <span >经济条件：</span>
+             </th>
+             <td align="left" id="jingjitd" style="display:none">
+                 <input class="easyui-combobox combobox-f combo-f textbox-f" type="text" id="h_EconomicCondition" style="width: 100px; display: none;" required="true" textboxname="h_EconomicCondition" comboname="h_EconomicCondition"><span class="textbox textbox-invalid combo" style="width: 98px; height: 20px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;"></a></span><input type="text" class="textbox-text validatebox-text textbox-prompt validatebox-invalid" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 72px;"><input type="hidden" class="textbox-value" name="h_EconomicCondition" value=""></span>
+             </td>
+
+         </tr>
+         <tr style="height:30px;display:none" id="zzax">
+             <th width="170px">
+                 <span>经办人：</span>
+             </th>
+             <td align="left" colspan="7">
+                 <input class="easyui-textobox" type="text" name="Operator" id="Operator" style="width:100px" disabled="">
+             </td>
+         </tr>
+         <tr style="height:20px;display:none;" id="qinhaikanghu">
+             <th width="100px">
+                 <span style="color:red">*</span>
+                 <span >行为能力：</span>
+             </th>
+             <td align="left">
+                 <input class="easyui-combobox combobox-f combo-f textbox-f" type="text" id="h_Capacity" style="width: 100px; display: none;" required="true" textboxname="h_Capacity" comboname="h_Capacity"><span class="textbox textbox-invalid combo" style="width: 98px; height: 20px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;"></a></span><input type="text" class="textbox-text validatebox-text textbox-prompt validatebox-invalid" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 72px;"><input type="hidden" class="textbox-value" name="h_Capacity" value=""></span>
+             </td>
+             <th width="100px">
+                 <span style="color:red">*</span>
+                 <span >计划生育特困家庭:</span>
+             </th>
+             <td align="left">
+                 <select type="text" name="h_FamilyPlanning" id="h_FamilyPlanning" style="width:100px;" required="true">
+                     <option value="否">否</option>
+                     <option value="是">是</option>
+                 </select>
+             </td>
+             <th width="100px">
+                 <span style="color:red">*</span>
+                 <span id="DeptIDname">特殊贡献:</span>
+             </th>
+             <td align="left" colspan="3">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_SpecialContribution" style="width: 400px; display: none;" required="true" textboxname="h_SpecialContribution"><span class="textbox textbox-invalid" style="width: 398px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt validatebox-invalid" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 390px;"><input type="hidden" class="textbox-value" name="h_SpecialContribution" value=""></span>
+             </td>
+         </tr><tr style="height: 35px;" id="trbox1">
+             <td colspan="8" align="left" style="border-left:1px solid #EOECFF;">
+                 <font face="黑体" color="#228B22" size="3px"> 关联社区管家</font>
+             </td>
+         </tr>
+
+         <tr style="height: 40px;" id="trbox2">
+             <th>
+                 <span style="color:red"></span>关联社区管家：
+             </th>
+             <td align="left">
+                 <select class="easyui-combogrid combogrid-f combo-f textbox-f" editable="false" type="text" id="h_HouseKeeperID" style="width: 150px; display: none;" textboxname="h_HouseKeeperID" comboname="h_HouseKeeperID"></select><span class="textbox combo" style="width: 140px; height: 20px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;"></a></span><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" readonly="readonly" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 122px;"><input type="hidden" class="textbox-value" name="h_HouseKeeperID" value=""></span>
+             </td>
+             <th align="left" style="display:none">姓名</th>
+             <td align="left" style="display:none">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_HouseKeeperName" style="width: 150px; display: none;" required="true" textboxname="h_HouseKeeperName"><span class="textbox textbox-invalid" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt validatebox-invalid" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_HouseKeeperName" value=""></span>
+             </td>
+             <th>电话</th>
+             <td align="left" colspan="4">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_HouseKeeperTel" style="width: 150px; display: none;" textboxname="h_HouseKeeperTel"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_HouseKeeperTel" value=""></span>
+             </td>
+
+         </tr>
+
+
+
+         <tr style="height:40px;display:none;">
+             <th>
+                 <span style="color:red">*</span>所属运营商：
+             </th>
+             <td align="left">
+                 <select class="easyui-combobox combobox-f combo-f textbox-f" editable="false" type="text" id="h_CorpID" style="width: 150px; display: none;" textboxname="h_CorpID" comboname="h_CorpID">
+                     <option></option>
+                 </select>
+                 <span class="textbox combo" style="width: 140px; height: 20px;">
+                     <span class="textbox-addon textbox-addon-right" style="right: 0px;">
+                         <a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;">
+                         </a>
+                     </span>
+                     <input type="text" class="textbox-text validatebox-text" autocomplete="off" readonly="readonly" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 122px;">
+                     <input type="hidden" class="textbox-value" name="h_CorpID" value="61"></span>
+             </td>
+             <td align="left"></td>
+             <td align="left"></td>
+             <td align="left"></td>
+             <td align="left"></td>
+             <td align="left"></td>
+             <td align="left"></td>
+         </tr>
+
+         <tr style="height:35px">
+             <td colspan="6" align="left" style="border-left:1px solid #EOECFF;">
+                 <font face="黑体" color="#228B22" size="3px"> 紧急联系人</font>
+             </td>
+             <th align="center" rowspan="4">
+                 二维码：
+             </th>
+             <td align="center" rowspan="4">
+                 <div class="easyui-colmacro" id="h_TwoCode" width="150" height="130" showtype="qrcode"></div>
+             </td>
+         </tr>
+
+         <tr style="height:30px;">
+             <th width="120px">
+                 <span style="color:red" id="jinjilianxiren">*</span>紧急联系人①：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_Emergency" style="width: 150px; display: none;" required="true" textboxname="h_Emergency"><span class="textbox textbox-invalid" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt validatebox-invalid" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;" title=""><input type="hidden" class="textbox-value" name="h_Emergency" value=""></span>
+             </td>
+             <th width="70px">
+                 <span style="color:red" id="lxdh">*</span>联系电话：
+             </th>
+             <td align="left">
+                 <input class="textbox" type="text" name="h_Phone2" id="h_Phone2" ;"="" style="width:150px;height:21px;" required="true">
+             </td>
+             <th width="70px">
+                 关系：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_Phone" style="width: 150px; display: none;" textboxname="h_Phone"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_Phone" value=""></span>
+             </td>
+         </tr>
+         <tr style="height:30px;display:none;" id="ponn">
+             <th width="120px">
+                 紧急联系人②：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_Emergency2" style="width: 150px; display: none;" textboxname="h_Emergency2"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_Emergency2" value=""></span>
+             </td>
+             <th width="70px">
+                 联系电话：
+             </th>
+             <td align="left">
+                 <input class="textbox" type="text" name="h_Phone3" id="h_Phone3" ;"="" style="width:150px;height:21px;">
+             </td>
+             <th width="70px">
+                 关系：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_Pho1" style="width: 150px; display: none;" textboxname="h_Pho1"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_Pho1" value=""></span>
+             </td>
+         </tr>
+         <tr style="height:30px;display:none;" id="ponn2">
+             <th width="120px">
+                 紧急联系人③：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_Emergency3" style="width: 150px; display: none;" textboxname="h_Emergency3"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_Emergency3" value=""></span>
+             </td>
+             <th width="70px">
+                 联系电话：
+             </th>
+             <td align="left">
+                 <input class="textbox" type="text" name="h_Phone4" id="h_Phone4"  style="width:150px;height:21px;">
+             </td>
+             <th width="70px">
+                 关系：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_Pho2" style="width: 150px; display: none;" textboxname="h_Pho2"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_Pho2" value=""></span>
+             </td>
+
+
+         </tr>
+         <tr style="height:30px;display:none;" id="ponn3">
+
+             <th width="120px">
+                 紧急联系人④：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_Emergency4" style="width: 150px; display: none;" textboxname="h_Emergency4"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_Emergency4" value=""></span>
+             </td>
+             <th width="70px">
+                 联系电话：
+             </th>
+             <td align="left">
+                 <input class="textbox" type="text" name="h_Phone5" id="h_Phone5" ;"="" style="width:150px;height:21px;">
+             </td>
+             <th width="70px">
+                 关系：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_Pho3" style="width: 150px; display: none;" textboxname="h_Pho3"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_Pho3" value=""></span>
+             </td>
+
+
+         </tr>
+
+         <tr style="height:35px">
+             <td colspan="6" align="left" style="border-left:1px solid #EOECFF;">
+
+                 <font face="黑体" color="#228B22" size="3px">老人服务信息</font>
+             </td>
+         </tr>
+         <tr style="height:30px;">
+             <th width="70px">
+                 <span style="color:red" id="fuwuleixing"></span>服务类型：
+             </th>
+             <td align="left">
+                 <select class="easyui-combobox combobox-f combo-f textbox-f" editable="false" type="text" id="h_ServiceType" style="width: 150px; display: none;" required="true" textboxname="h_ServiceType" comboname="h_ServiceType"></select><span class="textbox combo" style="width: 140px; height: 20px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;"></a></span><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" readonly="readonly" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 122px;"><input type="hidden" class="textbox-value" name="h_ServiceType" value=""></span>
+             </td>
+             <th width="70px">
+                 <span style="color:red" id="fuwuzhuangtai"></span>服务状态：
+             </th>
+             <td align="left">
+                 <select class="easyui-combobox combobox-f combo-f textbox-f" editable="false" type="text" id="h_ServiceState" style="width: 150px; display: none;" required="true" textboxname="h_ServiceState" comboname="h_ServiceState"></select><span class="textbox combo" style="width: 140px; height: 20px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;"></a></span><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" readonly="readonly" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 122px;"><input type="hidden" class="textbox-value" name="h_ServiceState" value=""></span>
+             </td>
+             <th width="70px">
+                 <span style="color:red"></span>服务套餐：
+             </th>
+             <td align="left">
+                 <select class="easyui-combogrid combogrid-f combo-f textbox-f" type="text" id="h_ServiceCombo" style="width: 150px; display: none;" editable="false" textboxname="h_ServiceCombo" comboname="h_ServiceCombo"></select><span class="textbox combo" style="width: 140px; height: 20px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;"></a></span><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" readonly="readonly" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 122px;"><input type="hidden" class="textbox-value" name="h_ServiceCombo" value=""></span>
+             </td>
+         </tr>
+         <tr style="height:35px">
+             <td colspan="8" align="left" style="border-left:1px solid #EOECFF;border-right:1px solid #EOECFF;">
+
+                 <font face="黑体" color="#228B22" size="3px">老人经济情况</font>
+             </td>
+         </tr>
+         <tr style="height:30px;">
+             <th width="70px">
+                 经济来源：
+             </th>
+             <td align="left">
+                 <input class="easyui-combobox combobox-f combo-f textbox-f" editable="false" type="text" id="h_Pocketbook" style="width: 150px; display: none;" textboxname="h_Pocketbook" comboname="h_Pocketbook"><span class="textbox combo" style="width: 140px; height: 20px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;"></a></span><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" readonly="readonly" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 122px;"><input type="hidden" class="textbox-value" name="h_Pocketbook" value=""></span>
+             </td>
+             <th width="70px">
+                 月收入：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_Revenue" style="width: 150px; display: none;" textboxname="h_Revenue"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_Revenue" value=""></span>
+             </td>
+
+             <th width="70px">
+                 医疗保障：
+             </th>
+             <td align="left">
+                 <select class="easyui-combobox combobox-f combo-f textbox-f" editable="false" type="text" id="h_Protection" style="width: 150px; display: none;" textboxname="h_Protection" comboname="h_Protection"></select><span class="textbox combo" style="width: 140px; height: 20px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;"></a></span><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" readonly="readonly" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 122px;"><input type="hidden" class="textbox-value" name="h_Protection" value=""></span>
+             </td>
+             <th width="70px">
+                 社保号：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_InsuranceNo" style="width: 150px; display: none;" textboxname="h_InsuranceNo"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_InsuranceNo" value=""></span>
+             </td>
+         </tr>
+         <tr style="height:35px">
+             <td colspan="8" align="left" style="border-left:1px solid #EOECFF;border-right:1px solid #EOECFF;">
+
+                 <font face="黑体" color="#228B22" size="3px">老人健康情况</font>
+             </td>
+         </tr>
+
+         <tr style="height:30px;">
+             <th width="70px">
+                 慢性病：
+             </th>
+             <td align="left">
+                 <input type="checkbox" name="h_CDisease" id="h_CDisease@dcd1.Rows[i][" id"].tostring()"="" value="高血压">高血压                                               <input type="checkbox" name="h_CDisease" id="h_CDisease@dcd1.Rows[i][" id"].tostring()"="" value="高血糖">高血糖                                               <input type="checkbox" name="h_CDisease" id="h_CDisease@dcd1.Rows[i][" id"].tostring()"="" value="无">无                                               <input type="checkbox" name="h_CDisease" id="h_CDisease@dcd1.Rows[i][" id"].tostring()"="" value="其他">其他
+             </td>
+
+             <!--<td align="left">
+                 <input type="checkbox" name="h_CDisease" id="h_CDisease1" value="无" checked="true"/>无
+                 <input type="checkbox" name="h_CDisease" id="h_CDisease2" value="高血压"/>高血压
+                 <input type="checkbox" name="h_CDisease" id="h_CDisease3" value="高血糖"/>高血糖
+             </td>-->
+             <th width="70px">
+                 血型：
+             </th>
+             <td align="left">
+                 <select class="easyui-combobox combobox-f combo-f textbox-f" editable="false" type="text" id="h_BloodType" style="width: 150px; display: none;" textboxname="h_BloodType" comboname="h_BloodType"></select><span class="textbox combo" style="width: 140px; height: 20px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;"></a></span><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" readonly="readonly" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 122px;"><input type="hidden" class="textbox-value" name="h_BloodType" value=""></span>
+             </td>
+             <th width="70px">
+                 失能情况：
+             </th>
+             <td align="left">
+                 <select class="easyui-combobox combobox-f combo-f textbox-f" editable="false" type="text" id="h_Anergy" style="width: 150px; display: none;" textboxname="h_Anergy" comboname="h_Anergy"></select><span class="textbox combo" style="width: 140px; height: 20px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;"></a></span><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" readonly="readonly" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 122px;"><input type="hidden" class="textbox-value" name="h_Anergy" value=""></span>
+             </td>
+             <th width="70px">
+                 残疾情况：
+             </th>
+             <td align="left">
+                 <select class="easyui-combobox combobox-f combo-f textbox-f" editable="false" type="text" id="h_Dependency" style="width: 150px; display: none;" textboxname="h_Dependency" comboname="h_Dependency"></select><span class="textbox combo" style="width: 140px; height: 20px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;"></a></span><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" readonly="readonly" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 122px;"><input type="hidden" class="textbox-value" name="h_Dependency" value=""></span>
+             </td>
+         </tr>
+         <tr style="height:35px">
+             <td colspan="8" align="left" style="border-left:1px solid #EOECFF;border-right:1px solid #EOECFF;">
+
+                 <font face="黑体" color="#228B22" size="3px">备注信息</font>
+             </td>
+         </tr>
+         <tr style="height:30px;">
+             <th width="70px">
+                 文化程度：
+             </th>
+             <td align="left">
+                 <input class="easyui-combobox combobox-f combo-f textbox-f" editable="false" type="text" id="h_Education" style="width: 150px; display: none;" textboxname="h_Education" comboname="h_Education"><span class="textbox combo" style="width: 140px; height: 20px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 20px;"></a></span><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" readonly="readonly" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 3px; padding-bottom: 3px; width: 122px;"><input type="hidden" class="textbox-value" name="h_Education" value=""></span>
+             </td>
+             <th width="70px">
+                 专业：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_Major" style="width: 150px; display: none;" textboxname="h_Major"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_Major" value=""></span>
+             </td>
+             <th width="70px">
+                 职称：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_Profession" style="width: 150px; display: none;" textboxname="h_Profession"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_Profession" value=""></span>
+             </td>
+             <th width="70px">
+                 原单位：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_YUnit" style="width: 150px; display: none;" textboxname="h_YUnit"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_YUnit" value=""></span>
+             </td>
+         </tr>
+
+         <tr style="height:30px;display:none;" id="ponn4">
+             <th width="70px">
+                 健康状况：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_jiankangz" style="width: 150px; display: none;" textboxname="h_jiankangz"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_jiankangz" value=""></span>
+             </td>
+             <th width="70px">
+                 爱好：
+             </th>
+             <td align="left">
+                 <input class="easyui-textbox textbox-f" type="text" id="h_aihao" style="width: 150px; display: none;" textboxname="h_aihao"><span class="textbox" style="width: 140px; height: 20px;"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="" style="margin-left: 0px; margin-right: 0px; padding-top: 3px; padding-bottom: 3px; width: 140px;"><input type="hidden" class="textbox-value" name="h_aihao" value=""></span>
+             </td>
+         </tr>
+         <tr style="height:30px;display:none;" id="ponn5">
+             <th width="70px">
+                 残疾证：
+             </th>
+             <td align="left">
+                 <!--  <input class="easyui-textbox" type="text" name="h_canjizheng" id="h_canjizheng" style="width:150px"/> -->
+                 <input type="hidden" id="h_canjizheng" name="h_canjizheng" value=""><div id="h_canjizheng_div"></div><input class="" filetype="*.jpg;*.png;*.gif" filetext="1" filewidth="150" fileheight="120" type="text" name="h_canjizheng_text" id="h_canjizheng_text" style="display: none;"><input type="button" style="border-left:none;margin:0;" value="图片管理">
+             </td>
+
+             <th width="70px">
+                 军属证：
+             </th>
+             <td align="left">
+                 <!-- <input class="easyui-textbox" type="text" name="h_junshu" id="h_junshu" style="width:150px"/> -->
+                 <input type="hidden" id="h_junshu" name="h_junshu" value=""><div id="h_junshu_div"></div><input class="" filetype="*.jpg;*.png;*.gif" filetext="1" filewidth="150" fileheight="120" type="text" name="h_junshu_text" id="h_junshu_text" style="display: none;"><input type="button" style="border-left:none;margin:0;" value="图片管理">
+             </td>
+
+
+             <th width="70px">
+                 其他证件：
+             </th>
+             <td align="left">
+                 <!--   <input class="easyui-combobox" editable="false" type="text" name="h_qitaz" id="h_qitaz" style="width:150px"/> -->
+                 <input type="hidden" id="h_qitaz" name="h_qitaz" value=""><div id="h_qitaz_div"></div><input class="" filetype="*.jpg;*.png;*.gif" filetext="1" filewidth="150" fileheight="120" type="text" name="h_qitaz_text" id="h_qitaz_text" style="display: none;"><input type="button" style="border-left:none;margin:0;" value="图片管理">
+             </td>
+
+         </tr>
+
+         <tr>
+             <td colspan="8" align="right" style="text-align: center;border-left:1px solid #EOECFF;border-right:1px solid #EOECFF;border-bottom:1px solid #EOECFF;background-color:#F8F8FF;">
+                 <button id="btnSave1" style="background-color:#28B779;border:1px solid #CCCCCC;width:100px;height:30px;">保存</button>
+                 <button id="btnClose" style="background-color:#B73B2C;border:1px solid #CCCCCC;width:100px;height:30px;">返回</button>
+                 <input type="hidden" id="h_state" value="0">
+                 <!--<a href="#" oppower="Save|保存" class="easyui-linkbutton" id="btnSave1" iconcls="icon-ok">保存</a>
+               <a href="#" class="easyui-linkbutton" id="btnClose" iconcls="icon-no">取消</a>-->
+             </td>
+         </tr>
+
+         </tbody>
+     </table>
+ </div>
+</body>
+</html>

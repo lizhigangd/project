@@ -1,0 +1,25 @@
+[
+  {
+    "id": 2000,
+    "pid": 20001,
+    "text": "新增老人",
+    "state": "closed",
+    "iconCls": "fa fa-user",
+    "url": ""
+  },
+  {
+    "id": 2000,
+    "pid": 20001,
+    "text": "批量导入",
+    "state": "closed",
+    "iconCls": "",
+    "url": ""
+  },{
+  "id": 2000,
+  "pid": 20001,
+  "text": "老人列表",
+  "state": "closed",
+  "iconCls": "",
+  "url": ""
+}
+]

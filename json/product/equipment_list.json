@@ -1,0 +1,47 @@
+{
+  "rows": [
+    {
+      "uuid": "1",
+      "markid": "1554554542121",
+      "eq_type": "血压计",
+      "de_properties": "个人",
+      "simnum": "",
+      "oldname": "王有才",
+      "oldcard": "44181119660621623X",
+      "'phone": "13013012345",
+      "releaseway": "免费",
+      "opentime": "2018-01-27 10:38:01",
+      "onlinestatus": "离线",
+      "status": "已开通"
+    },
+    {
+      "uuid": "3",
+      "markid": "1554554542121",
+      "eq_type": "血压计",
+      "de_properties": "个人",
+      "simnum": "",
+      "oldname": "王有才",
+      "oldcard": "44181119660621623X",
+      "'phone": "13013012345",
+      "releaseway": "免费",
+      "opentime": "2018-01-27 10:38:01",
+      "onlinestatus": "离线",
+      "status": "已开通"
+    },
+    {
+      "uuid": "3",
+      "markid": "1554554542121",
+      "eq_type": "血压计",
+      "de_properties": "个人",
+      "simnum": "",
+      "oldname": "王有才",
+      "oldcard": "44181119660621623X",
+      "'phone": "13013012345",
+      "releaseway": "免费",
+      "opentime": "2018-01-27 10:38:01",
+      "onlinestatus": "离线",
+      "status": "已开通"
+    }
+  ],
+  "total": "37"
+}

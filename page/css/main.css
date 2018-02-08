@@ -1,0 +1,247 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul li{
+   list-style: none;
+}
+body{
+    font:normal 1em "Microsoft YaHei";
+}
+.cursor{
+    cursor: pointer;
+}
+.clear-both{
+    clear: both;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.font-size-48{
+    font-size: 48px;
+}
+.font-size-32{
+    font-size: 32px;
+}
+.color-white{
+    color: white;
+}
+.color-3071c9{
+    color: #3071c9;
+}
+.bg-bfddf3{
+    background-color: #bfddf3;
+}
+.bg-white{
+    background-color: white;
+}
+.bg-def3fd{
+    background-color: #def3fd;
+}
+.display-inline-block{
+    display: inline-block;
+}
+.display-block{
+    display: block;
+}
+.head{
+    width: 100%;
+   /* height: 135px;*/
+}
+.head-on{
+    height: 50px;
+}
+.head-on-right{
+    float: right;
+    margin-right: 10px;
+}
+.head-on-right span{
+    display: block;
+    float: left;
+    margin-top: 20px;
+}
+.head-under{
+    height: 85px;
+    width: 100%;
+    background-color: #0287f1;
+}
+.logo{
+    height: 85px;
+    margin-left: 20px;
+}
+.s-name{
+    margin-left: 30px;
+}
+.s-name-o{
+    float: left;
+    line-height: 85px;
+    font-weight: lighter;
+}
+.s-name-t{
+    float: left;
+    line-height: 85px;
+    margin-left: 40px;
+    font-weight: lighter;
+}
+.head-under-icon{
+    float: right;
+    width: 30%;
+    height: 85px;
+    background-color: #3448a1;
+}
+.triangle-icon1{
+     width: 0;
+     height: 0;
+     border-left: 0px solid transparent;
+     border-right: 120px solid transparent;
+     border-bottom:85px solid #0287f1;
+ }
+.triangle-icon2{
+    width: 0;
+    height: 0;
+    margin-left: -120px;
+    border: 60px solid transparent;
+    border-top: 42px solid #3e58c9;
+}
+.close:hover{
+    padding: 2px;
+    background-color: rgb(222, 243, 253);
+}
+.banner{
+    width: 100%;
+    height: 312px;
+    background: url("../img/banner.gif") #f1f5f8 no-repeat center;
+}
+.label{
+    height: 60px;
+    width: 100%;
+    background-color: #158fed;
+}
+.nav-title{
+    width: 292px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+}
+.nav-triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: 260px;
+    border: 60px solid transparent;
+    border-top: 60px solid #ffffff;
+}
+.nav-triangle-s{
+    width: 0;
+    height: 0;
+    margin-left: -50px;
+    margin-top: -60px;
+    border: 50px solid transparent;
+    border-top: 50px solid #158fed;
+}
+.label-list{
+    height: 60px;
+    margin-left: 120px;
+    line-height: 40px;
+    max-width:1200px;
+}
+.content{
+    height: 1280px;
+    background-color: #eef3f7;
+}
+.label-list span{
+    padding: 0 20px;
+    margin-top: 20px;
+    background-color: #def3fd;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #183761;
+    margin-right: 5px;
+}
+.nav ul{
+    display: block;
+    background-color: white;
+    width: 292px;
+}
+.nav ul li{
+    display: block;
+    background:url("../img/nav.png") no-repeat 100% 100%;
+    background-size: 100%;
+   /* margin-bottom: 5px;*/
+    height: 74px;
+    text-align: center;
+    line-height: 74px;
+}
+.child{
+    width: 290px;
+    margin-top: -10px;
+    text-align: center;
+}
+.child span{
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.hover-span:hover{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #F5F2A6;
+}
+.nav i{
+    margin-right: 50px;
+    font-size: 21px;
+    line-height: 74px;
+}
+.nav-name{
+    display: block;
+    float: left;
+    height: 74px;
+    font-size: 22px;
+    text-align: center;
+}
+.template{
+    height:100%;
+    background-color: white;
+}
+.tab-1{
+    height: 130px;
+    color: #183761;
+}
+.tab-1-name{
+    float: left;
+    width: 11.597%;
+    margin-left: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.tab-1-name img{
+
+}
+.tab-1-name span{
+    text-align: center;
+}
+.operating{
+    float: left;
+    margin-left: 50px;
+    height: 130px;
+}
+.operating span{
+    padding: 5px 40px 5px 40px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.margin-top-20{
+    margin-top: 20px;
+}
+.operating span:hover{
+    padding: 5px 40px 5px 40px;
+    border-radius: 5px;
+    background-color: #def3fd;
+}
+.active{
+    background:url("../img/active.png") no-repeat 100% 100%;
+}

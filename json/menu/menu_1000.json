@@ -1,0 +1,54 @@
+[
+  {
+    "id": 2000,
+    "pid": 20001,
+    "text": "老年人电子档案管理",
+    "state": "closed",
+    "iconCls": "fa fa-handshake-o",
+    "url": ""
+  },
+  {
+    "id": 2001,
+    "pid": 20011,
+    "text": "子女及其监护人管理",
+    "state": "closed",
+    "iconCls": "fa fa-address-book",
+    "url": ""
+  },{
+      "id": 2002,
+      "pid": 20021,
+      "text": "基础数据维护",
+      "state": "closed",
+      "iconCls": "fa fa-bar-chart",
+      "url": "page/maintenance.html"
+  },
+  {
+      "id": 2003,
+      "pid": 20031,
+      "text": "工作人员管理",
+      "state": "closed",
+      "iconCls": "fa fa-user-circle-o",
+      "url": ""
+  },{
+      "id": 2004,
+      "pid": 20041,
+      "text": "设备管理",
+      "state": "closed",
+      "iconCls": "fa fa-tablet",
+      "url": "page/equipment.html"
+  },{
+      "id": 2005,
+      "pid": 20051,
+      "text": "健康管理",
+      "state": "closed",
+      "iconCls": "fa fa-heartbeat",
+      "url": "page/health.html"
+  },{
+      "id": 2006,
+      "pid": 20061,
+      "text": "定位及围栏管理",
+      "state": "closed",
+      "iconCls": "fa fa-map-marker",
+      "url": "page/positioning.html"
+  }
+]

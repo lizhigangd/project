@@ -1,0 +1,25 @@
+[
+  {
+
+    "pid": 2000,
+    "text": "新增老人",
+    "state": "open",
+    "iconCls": "",
+    "url": "page/addOld.html"
+  },
+  {
+
+    "pid": 2000,
+    "text": "批量导入",
+    "state": "open",
+    "iconCls": "",
+    "url": "page/batch_import.html"
+  },{
+
+  "pid": 2000,
+  "text": "老人列表",
+  "state": "open",
+  "iconCls": "",
+  "url": "page/oldList.html"
+}
+]

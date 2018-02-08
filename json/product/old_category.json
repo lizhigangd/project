@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "uuid": "1",
+      "type_number": "001",
+      "type_name": "一类老人",
+      "mark": "测试"
+    },
+    {
+      "uuid": "2",
+      "type_number": "002",
+      "type_name": "二类老人",
+      "mark": "测试"
+    },
+    {
+      "uuid": "2",
+      "type_number": "003",
+      "type_name": "三类老人",
+      "mark": "测试"
+    },
+    {
+      "uuid": "3",
+      "type_number": "004",
+      "type_name": "四类老人",
+      "mark": "测试"
+    }
+  ]
+}

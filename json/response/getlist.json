@@ -1,0 +1,27 @@
+[
+  {
+    "uuid":"4028b4815a368a28015a3a83e1c1018c",
+    "creatorId":"admin",
+    "creator":"系统管理员",
+    "createTime":"2017-02-14 10:46:45",
+    "modifierId":"admin",
+    "modifier":"系统管理员",
+    "modifyTime":"2017-03-19 15:47:44",
+    "isDel":0,
+    "remark":null,
+    "sort":1,
+    "levelId":3,
+    "codeSetId":"AGA",
+    "code":"",
+    "status":null,
+    "url":null,
+    "id":"71A1A800E8BC4BE99E7EDF6591E88244",
+    "pid":"31643765E6824628BBB51AEB99949E2B",
+    "text":"中国",
+    "state":"closed",
+    "iconCls":"",
+    "checked":null,
+    "attributes":null,
+    "children":null,
+    "type":null}
+]

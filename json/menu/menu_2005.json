@@ -1,0 +1,38 @@
+[
+  {
+
+    "pid": 2005,
+    "text": "就诊记录",
+    "state": "open",
+    "iconCls": "",
+    "url": "page/visit_records.html"
+  },{
+
+  "pid": 2005,
+  "text": "体检记录",
+  "state": "open",
+  "iconCls": "",
+  "url": "page/examine.html"
+},{
+
+  "pid": 2005,
+  "text": "志愿者跟随记录",
+  "state": "open",
+  "iconCls": "",
+  "url": "page/volunteers_follow.html"
+},{
+
+  "pid": 2005,
+  "text": "健康数据",
+  "state": "open",
+  "iconCls": "",
+  "url": "page/health_data.html"
+},{
+
+  "pid": 2005,
+  "text": "设备体检记录",
+  "state": "open",
+  "iconCls": "",
+  "url": "page/equipment_inspection.html"
+}
+]

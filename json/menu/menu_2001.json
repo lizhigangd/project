@@ -1,0 +1,25 @@
+[
+  {
+
+    "pid": 2001,
+    "text": "新增子女及其监护人",
+    "state": "open",
+    "iconCls": "",
+    "url": "page/guardian.html"
+  },
+  {
+
+    "pid": 2001,
+    "text": "批量录入",
+    "state": "open",
+    "iconCls": "",
+    "url": "page/batch_import.html"
+  },{
+
+  "pid": 2001,
+  "text": "子女及其监护人列表",
+  "state": "open",
+  "iconCls": "",
+  "url": "page/children_list.html"
+}
+]

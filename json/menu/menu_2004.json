@@ -1,0 +1,17 @@
+[
+  {
+
+    "pid": 2004,
+    "text": "设备列表",
+    "state": "open",
+    "iconCls": "",
+    "url": "page/equipment_list.html"
+  },{
+
+  "pid": 2004,
+  "text": "设备开通",
+  "state": "open",
+  "iconCls": "",
+  "url": "page/equipment_opened.html"
+}
+]

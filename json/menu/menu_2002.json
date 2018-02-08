@@ -1,0 +1,31 @@
+[
+  {
+
+    "pid": 2002,
+    "text": "老年人类别管理",
+    "state": "open",
+    "iconCls": "",
+    "url": "page/old_category.html"
+  },
+  {
+
+    "pid": 2002,
+    "text": "第三方服务管理",
+    "state": "open",
+    "iconCls": "",
+    "url": "page/tp_service.html"
+  },{
+  "pid": 2002,
+  "text": "增加服务机构",
+  "state": "open",
+  "iconCls": "",
+  "url": "page/is_agencies.html"
+},{
+
+  "pid": 2002,
+  "text": "查询服务机构",
+  "state": "open",
+  "iconCls": "",
+  "url": "page/qs_agencies.html"
+}
+]
